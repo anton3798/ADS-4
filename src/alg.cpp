@@ -53,17 +53,14 @@ int countPairs3(int *arr, int len, int value) {
         int sum = arr[l] + arr[r];
         if (sum > value) {
             r--;
-        }
-        else if (sum < value) {
+        } else if (sum < value) {
             l++;
-        }
-        else {
+        } else {
             if (arr[l] == arr[r]) {
                 int k = r - l + 1;
                 c += k * (k - 1) / 2;
                 break;
-            }
-            else {
+            } else {
                 int val = arr[l];
                 int cnl = 0;
                 while (l < r && arr[l] == val) {
